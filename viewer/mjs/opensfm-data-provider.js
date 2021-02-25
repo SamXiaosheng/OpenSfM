@@ -527,7 +527,7 @@ class OpenSfmDataProvider extends Mapillary.API.DataProviderBase {
     }
 
     _fetchReconstructions(urls) {
-        this._loaderPromise = Promise
+        return Promise
             .allSettled(
                 urls.map(
                     url => this._fetchReconstruction(url)
